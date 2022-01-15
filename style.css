@@ -75,11 +75,12 @@ h1::before{
     color: #f85b12;
     border-right: 2px solid hidden;
     overflow: hidden;
-    animation: animate 2s linear 3;
+    animation: animate 3s linear 3;
     animation-delay: 1s;
     animation-direction: alternate;
 
 }
+/* animation style start */
 @keyframes animate
   {
     0%,100%{
@@ -89,6 +90,7 @@ h1::before{
         width: 100%;
     }
   }
+  /* animation style end */
 
 .button{
     Width:196px;
@@ -191,26 +193,53 @@ hr{
 
 /* Extra-container-style-start */
   .extra-topic{
-      display: flex;
-      justify-content: space-between;
-      margin-left: 50px;
-      margin-right: 50px;
+      margin-left: 30px;
+      padding-left: 20px;
+      margin-bottom: 150px;
+     
   }
-  .extra-topic img{
-      width: 500px;
-      height: 300px;
+  .extra-topic h2{
+      text-align: center;
+      margin-bottom: 20px;
   }
-  .join-button{
-    Width:196px;
-    Height:44px;
-    border: 1px solid #d6125a ;
-    background-color:#d6125a ;
+  .extra-1-child{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-row-gap: 15px;
+      justify-items: center;
+   
+
   }
-  .join-button a{
-      text-decoration: none;
+  .extra-2-child{
+      border: 2px solid hidden;
+      margin: 10px;
+      padding: 10px;
+      
+  }
+  .extra-1-child img{
+      width: 150px;
+      height: 150px;
+      border: 2px solid hidden;
+      border-radius: 50%;
+      
+  }
+  .extra-1-child h3{
+      text-align: center;
+     
+  }
+  .extra-button {
+      text-align: center;
+
+  }
+  .extra-button a{
       color: white;
+      text-decoration: none;
   }
+
+  
+  
   /* Extra-container-style-end */
+
   /*---------------------------
        Main style end 
   ------------------------------*/
@@ -252,7 +281,7 @@ hr{
          flex-wrap: wrap;
          align-items:center;
     }
-    .collection{
+    .collection,  .extra-1-child{
         grid-template-columns: repeat(1, 1fr);
         grid-row-gap: 20px;
         
@@ -282,7 +311,7 @@ hr{
         flex-wrap: wrap;
         align-items:center;
     }
-    .collection{
+    .collection,  .extra-1-child{
         grid-template-columns: repeat(2, 1fr);
         grid-row-gap: 20px;
         align-items:center;
@@ -294,5 +323,8 @@ hr{
     
 }
 
+/*----------------------------
+       Media Query style end      
+-----------------------------*/
         
     
