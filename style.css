@@ -1,3 +1,6 @@
+/*-------------------------
+      Header style start 
+   ---------------------------*/
 .menubar{
     display: flex;
     justify-content: space-between;
@@ -15,15 +18,23 @@
     margin-top: 18px;
     font-size: 18px;
     
+    
 
 }
 .navigate a{
+    color: black;
     padding-left: 20px;
     text-decoration: none;
 }
 .navigate i{
     padding-left: 20px;
 }
+/*-------------------------
+      Header style end 
+   ---------------------------*/
+
+
+
 
 /*---------------------------
        Main style start 
@@ -36,60 +47,90 @@
     background-color: linen;
 
 }
+/* container-part-1 style start */
 .container-part-1{
     display: flex;
     flex-direction: column;
     flex-direction: row;
     padding: 40px;
     padding-top: 60px;
-    
-    
 }
 .description{
     padding-right: 120px;
 }
-.description-font{
+h1{
     font-size: 40px;
+    position: relative;
+    color: black;
+    text-transform: uppercase;
+
 }
+h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 50%;
+    color: #f85b12;
+    border-right: 2px solid hidden;
+    overflow: hidden;
+    animation: animate 2s linear 3;
+    animation-delay: 1s;
+    animation-direction: alternate;
+
+}
+@keyframes animate
+  {
+    0%,100%{
+        width: 0;
+    }
+    100%{
+        width: 90%;
+    }
+  }
+
 .button{
     Width:196px;
     Height:44px;
     color: white;
     border: 1px solid #d6125a ;
     border-radius: 20px;
-    background-color:#d6125a ;
+    background-color:#d6125a;
 }
 .description-img{
     Width:440px;
     Height:440px;
-    border: 2px solid red;
+    border: 2px solid rgba(220, 198, 241, 0.219);
     border-radius: 50%;
-    background-color:rgb(163, 173, 185) ;
-    
-    
+    background-color:rgba(220, 198, 241, 0.219) ;
 }
-hr{
+/* container-part-1 style end */
+
+
+/* Logo style start */
+hr{ 
+    border:0px;
+    height: 1px; 
+    /*Note:This line has a gradient line using linear-gradient as the background. */
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); 
     margin-top:30px;
     margin-bottom:30px;
     margin-left:70px ;
     margin-right:70px ;
-
- 
 }
 .logo{
     text-align: center;
-
 }
 .logo img{
-   
    padding-left: 25px;
    padding-right: 25px;
-    
 }
-/*------------------------
-     container-part-2 
-     ----------------------------*/
+/* Logo style end */
 
+
+
+/* container-part-2 style start */
 .container-part-2{
     padding-left: 50px;
     padding-right: 50px;
@@ -99,7 +140,7 @@ hr{
 .part-2-headline{
     text-align: center;
     margin-top: 5px;
-    margin-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 .collection{
@@ -112,16 +153,18 @@ hr{
     
 }
 .outline{
-    border: 2px solid blue;
+    border: 2px solid white;
     border-radius: 5px;
-    padding: 5px;
-    background-color:rgb(238, 210, 214) ;
+    padding: 15px;
+    margin-right: 20px;
+    background-color:white;
 
 }
 .filled{
     color: #FB8200;
 }
 .seemore-button{
+    padding-right: 22px;
     margin-bottom: 150px;
 }
 #seemore{
@@ -131,9 +174,12 @@ hr{
     padding-right: 50px;
     margin-bottom: 150px;
 }
-/*---------------------------------
-          extra-part-style-start          
-  ---------------------------------- */
+/* container-part-2 style end */
+
+
+
+
+/* Extra-part-style-start */
   .extra-topic{
       display: flex;
       justify-content: space-between;
@@ -172,5 +218,5 @@ hr{
     padding-right: 15px;
   }
 
-
+  
 
