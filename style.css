@@ -1,25 +1,40 @@
+body{
+    Width:1200px;
+    Height:auto;
+    background-color: linen;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 20px;
+    
+
+}
+
+
+
 /*-------------------------
       Header style start 
    ---------------------------*/
+
+.container{
+    margin-left: 40px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+
+}
+
+
+   /* menu style start */
 .menubar{
     display: flex;
     justify-content: space-between;
-    background-color: linen;
-    Width:1150px;
-    Height:60px;
-    margin-left: 40px;
     margin-right: 0px;
     padding-top: 30px;
     padding-left: 50px;
     padding-right: 50px;
-    font-family: 'Poppins', sans-serif;
+    
 }
 .navigation{
     margin-top: 18px;
     font-size: 18px;
-    
-    
-
 }
 .navigate a{
     color: black;
@@ -29,28 +44,13 @@
 .navigate i{
     padding-left: 20px;
 }
-/*-------------------------
-      Header style end 
-   ---------------------------*/
+/* menu style end */
 
 
 
-
-/*---------------------------
-       Main style start 
-  ------------------------------*/
-.container{
-    font-family: 'Poppins', sans-serif;
-    Width:1250px;
-    Height:auto;
-    margin-left: 40px;
-    background-color: linen;
-
-}
-/* container-part-1 style start */
-.container-part-1{
+/* Header-content style start */
+.Header-container{
     display: flex;
-    flex-direction: column;
     flex-direction: row;
     padding: 40px;
     padding-top: 60px;
@@ -70,7 +70,7 @@ h1::before{
     position: absolute;
     top: 0;
     left: 0;
-    width: 90%;
+    width: 100%;
     height: 50%;
     color: #f85b12;
     border-right: 2px solid hidden;
@@ -86,13 +86,14 @@ h1::before{
         width: 0;
     }
     100%{
-        width: 90%;
+        width: 100%;
     }
   }
 
 .button{
     Width:196px;
     Height:44px;
+    font-weight: 700;
     color: white;
     border: 1px solid #d6125a ;
     border-radius: 20px;
@@ -105,7 +106,7 @@ h1::before{
     border-radius: 50%;
     background-color:rgba(220, 198, 241, 0.219) ;
 }
-/* container-part-1 style end */
+/* Header-content style end */
 
 
 /* Logo style start */
@@ -115,9 +116,9 @@ hr{
     /*Note:This line has a gradient line using linear-gradient as the background. */
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); 
     margin-top:30px;
-    margin-bottom:30px;
     margin-left:70px ;
     margin-right:70px ;
+   
 }
 .logo{
     text-align: center;
@@ -127,19 +128,27 @@ hr{
    padding-right: 25px;
 }
 /* Logo style end */
+/*-------------------------
+      Header style end 
+   ---------------------------*/
 
 
 
-/* container-part-2 style start */
-.container-part-2{
+
+/*---------------------------
+       Main style start 
+  ------------------------------*/
+/* Main-container-1 style start */
+.container-1{
     padding-left: 50px;
     padding-right: 50px;
-    margin-top: 100px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
+   
+    /* margin-bottom: 60px; */
 }
-.part-2-headline{
+.container-1-headline{
     text-align: center;
-    margin-top: 5px;
+    margin-top: 30px;
     padding-bottom: 15px;
 }
 
@@ -164,22 +173,23 @@ hr{
     color: #FB8200;
 }
 .seemore-button{
-    padding-right: 22px;
+    margin-right: 0px;
     margin-bottom: 150px;
 }
 #seemore{
     text-decoration: none;
+    font-weight: 600;
     float: right;
-    color: #d6125a;
-    padding-right: 50px;
+    color: #d6125a ;
+    padding-right: 0px;
     margin-bottom: 150px;
 }
-/* container-part-2 style end */
+/* Main-container-1 style end */
 
 
 
 
-/* Extra-part-style-start */
+/* Extra-container-style-start */
   .extra-topic{
       display: flex;
       justify-content: space-between;
@@ -200,16 +210,22 @@ hr{
       text-decoration: none;
       color: white;
   }
-  /* Footer style start */
+  /* Extra-container-style-end */
+  /*---------------------------
+       Main style end 
+  ------------------------------*/
+
+
+
+  /*----------------------------
+       Footer style start       
+    -----------------------------*/
   .footer{
-    Width:1250px;
-    Height:auto;
-    font-family: 'Poppins', sans-serif;
     background-color: rgb(14, 14, 73);
     color:white;
     text-align: center;
     padding-top: 40px;
-    margin-left: 40px;
+    padding-left: 40px;
     padding-bottom: 40px;
     margin-bottom: 50px;
   }
@@ -217,6 +233,66 @@ hr{
     padding-left: 15px;
     padding-right: 15px;
   }
+ /*----------------------------
+       Footer style end       
+    -----------------------------*/
 
   
+/*----------------------------
+       Media Query style start      
+-----------------------------*/
 
+/* Media Query style for Mobile */
+@media only screen and (max-width:688px) {
+    body{
+        width: 100%;
+    }
+    .Header-container, .extra-topic{
+         flex-direction: column;
+         flex-wrap: wrap;
+         align-items:center;
+    }
+    .collection{
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 20px;
+        
+    }
+    h1{
+        font-size: 14px;  
+    }
+    .description{
+        margin-bottom: 100px;
+    }
+    .description-img{
+        padding-right: 30px;
+        margin-left: 30px;
+    }
+
+
+     
+}
+/* Media Query style for tab */
+@media only screen and (min-width:688px) and 
+(max-width:992px){
+    body{
+        width: 100%;
+    }
+    .Header-container, .extra-topic{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items:center;
+    }
+    .collection{
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 20px;
+        align-items:center;
+        
+    }
+    h1{
+        font-size: 30px;  
+    }
+    
+}
+
+        
+    
